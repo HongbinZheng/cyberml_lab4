@@ -32,7 +32,21 @@
    1. The DNN architecture used to train the face recognition model is the state-of-the-art DeepID network. 
    2. To evaluate the backdoored model, execute `eval.py` by running:  
       `python3 eval.py <clean validation data directory> <poisoned validation data directory> <model directory>`.
-      
+    
+
+      To run the code and generate the good net
+             python3 lab4.py
+
+      To evaluate the X=2% for goodnet  b prime:
+            python3 eval.py data/cl/test.h5 data/bd/bd_test.h5 ./goodnet0.02.h5
+
+      To evaluate the X=4% for goodnet  b prime:
+            python3 eval.py data/cl/test.h5 data/bd/bd_test.h5 ./goodnet0.04.h5
+
+      To evaluate the X=10% for goodnet  b prime:
+            python3 eval.py data/cl/test.h5 data/bd/bd_test.h5 ./goodnet0.1.h5
+
+
       E.g., `python3 eval.py data/cl/valid.h5 data/bd/bd_valid.h5 models/bd_net.h5`. This will output:
       Clean Classification accuracy: 98.64 %
       Attack Success Rate: 100 %
